@@ -1,20 +1,11 @@
-import { useTranslation } from "react-i18next";
+import { ThemeProvider } from "./components/theme-provider";
+import { Home } from "./components/home";
 
 function App() {
-  const { t, i18n } = useTranslation();
-
   return (
-    <>
-      <p className="text-2xl font-bold">{t("common.hero.title")}</p>
-      <p>test i don't know wtf i'm writing</p>
-      <button
-        onClick={() => {
-          i18n.changeLanguage(i18n.language === "fr-FR" ? "en-US" : "fr-FR");
-        }}
-      >
-        toggle language
-      </button>
-    </>
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+      <Home />
+    </ThemeProvider>
   );
 }
 
