@@ -5,12 +5,17 @@ function App() {
 
   return (
     <>
-      <p className="text-2xl font-bold">{t('common.hero.title')}</p>
-      <button onClick={() => {
-        i18n.changeLanguage(i18n.language === 'fr-FR' ? 'en-US' : 'fr-FR');
-      }}>toggle language</button>
+      <p className="text-2xl font-bold">{t("common.hero.title")}</p>
+      <p>test i don't know wtf i'm writing</p>
+      <button
+        onClick={() => {
+          i18n.changeLanguage(i18n.language === "fr-FR" ? "en-US" : "fr-FR");
+        }}
+      >
+        toggle language
+      </button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
